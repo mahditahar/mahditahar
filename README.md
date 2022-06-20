@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @mahditahar
 - 👀 I’m interested in delphi
 - 🌱 I’m currently learning delphi and oop
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 💞️ I’m looking to collaborate
+- 📫 How to reach me : algeria
 
 <!---
 mahditahar/mahditahar is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
