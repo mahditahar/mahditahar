@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function addHTML(){
+            document.getElementById('testhtml').innerHTML +=document.getElementById('txthtml').value;
+            document.getElementById('txthtml').value='';
+        }
+        function resetHTML(){
+            document.getElementById('txthtml').innerHTML=''; 
+
+        }
+        function addJS(){
+            if (document.getElementById('ajout')) {
+                document.getElementById('ajout').parentNode.removeChild(document.getElementById('ajout'));
+            }
+            var newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.text=document.getElementById('txtjs').value;
+
+            newScript.id = 'ajout';
+            document.getElementsByTagName('head')[0].appendChild(newScript);
+            document.getElementById('txtjs').value='';
+
+        }
+
+ 
+    </script>
+    <style type="text/css">
+        textarea {
+            width: 80%;
+            display: block;
+            overflow: auto;
+            min-height: 100px;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="testhtml"></div>
+    <div id="editcode">
+    <fieldset> 
+        <legend>code Html</legend>
+        <textarea id="txthtml"></textarea>
+        <input type="button" value="inserer la portion html" onclick="addHTML();">
+        <input type="button" value="reset  la portion html" onclick="resetHTML();">
+    </fieldset>
+
+    <fieldset>   
+        <legend>code Js</legend>
+        <textarea id="txtjs"></textarea>
+        <input type="button" value="executer la portion js" onclick="addJS();">
+    </fieldset> 
+
+    </div>
+
+    
+</body>
+</html>
